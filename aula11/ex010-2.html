@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Sistema de multas</h1>
+    País: <input type="text" name="pais" id="ipais">
+    <input type="button" value="Verificar" onclick="nacionalidade()">
+    <div id="res">
+
+    </div>
+    <script>
+        function nacionalidade() {
+            var ipais = document.querySelector('input#ipais')
+            var res = document.querySelector('div#res')
+            var nacio = (ipais.value)
+            res.innerHTML = `Seu país é ${nacio}, `
+            if (nacio == 'Brasil') {
+                res.innerHTML += `você é Brasileiro!`
+            } else {
+                res.innerHTML += `você é estrangeiro!`
+            }
+        }
+        
+    </script>
+</body>
+</html>
