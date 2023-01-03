@@ -5,10 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        p.erro{
+            color: red;
+        }
+
+        p.gamer{
+            color: blue;
+        }
+
+        p.ngamer{
+            color: green;
+        }
+    </style>
 </head>
 <body>
     <h1>Gamer ou não gamer eis a questão.</h1>
-    Você gosta de jogar? 
+    <p>Você gosta de jogar?</p>
     <input type="radio" name="yorn" id="sim" value="sim">Sim
     <input type="radio" name="yorn" id="nao" value="nao">Não
     <button type="button" onclick="checkButton()">Verificar</button>
@@ -19,14 +32,14 @@
         function checkButton() {
             var res = document.querySelector('div#res')
             if(document.getElementById('sim').checked){
-                res.innerHTML = 'Vocé é gamer!'
+                res.innerHTML = '<p class="gamer">Vocé é gamer!</p>'
             }
             else if(document.getElementById('nao').checked){
-                res.innerHTML = 'Voce não é gamer!'
+                res.innerHTML = '<p class="ngamer">Voce não é gamer!</p>'
             }
 
             else{
-                res.innerHTML = 'Marque uma opção acima!'
+                res.innerHTML = '<p class="erro">Marque uma opção acima!</p>'
             }
         }
         
