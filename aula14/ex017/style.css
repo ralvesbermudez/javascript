@@ -2,11 +2,14 @@ body {
     background: rgb(90, 90, 300);
     font: normal 15pt Arial;
     color: white;
-    text-align: center;
 }
 
 header {
     font-size: 1.2em;
+}
+
+h1 {
+    text-align: center;
 }
 
 section {
@@ -21,4 +24,5 @@ section {
 
 footer {
     font-style: italic;
+    text-align: center;
 }
